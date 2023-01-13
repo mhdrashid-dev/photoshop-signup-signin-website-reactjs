@@ -16,17 +16,17 @@ function About() {
           <div className="card min-h-[60vh] md:min-h-[30vh] my-7 lg:mb-0 font-roboto text-[rgba(0,0,0,.8)] md:mx-5">
             <img src={CardOne} alt="" className='w-full object-cover' />
             <h1 className='my-3 font-bold '>Remix your pics</h1>
-            <p className='font-normal'>Fix flaws and swap backgrounds in a few clicks. Add effects, mix up colours and change someone’s expression. With powerful editing tools, you can quickly give your photos the look you want.</p>
+            <p className='font-normal lg:text-sm xl:text-base'>Fix flaws and swap backgrounds in a few clicks. Add effects, mix up colours and change someone’s expression. With powerful editing tools, you can quickly give your photos the look you want.</p>
           </div>
           <div className="card min-h-[60vh] md:min-h-[30vh] my-7 lg:mb-0 font-roboto text-[rgba(0,0,0,.8)] md:mx-5">
             <img src={CardTwo} alt="" className='w-full object-cover' />
             <h1 className='my-3 font-bold '>Remix your pics</h1>
-            <p className='font-normal'>Fix flaws and swap backgrounds in a few clicks. Add effects, mix up colours and change someone’s expression. With powerful editing tools, you can quickly give your photos the look you want.</p>
+            <p className='font-normal lg:text-sm xl:text-base'>Fix flaws and swap backgrounds in a few clicks. Add effects, mix up colours and change someone’s expression. With powerful editing tools, you can quickly give your photos the look you want.</p>
           </div>
           <div className="card min-h-[60vh] md:min-h-[30vh] my-7 lg:mb-0 font-roboto text-[rgba(0,0,0,.8)] md:mx-5">
             <img src={CardThree} alt="" className='w-full object-cover' />
             <h1 className='my-3 font-bold '>Remix your pics</h1>
-            <p className='font-normal'>Fix flaws and swap backgrounds in a few clicks. Add effects, mix up colours and change someone’s expression. With powerful editing tools, you can quickly give your photos the look you want.</p>
+            <p className='font-normal lg:text-sm xl:text-base'>Fix flaws and swap backgrounds in a few clicks. Add effects, mix up colours and change someone’s expression. With powerful editing tools, you can quickly give your photos the look you want.</p>
           </div>
         </div>
       </div>            
