@@ -10,19 +10,18 @@ function Signup() {
         <div className="heading">
             <h1 className='mb-2 text-[2rem] font-semibold font-roboto lg:text-2xl xl:text-[2rem]'>Create an account</h1>            
         </div>
-        <div className="different-account-sec flex my-5 w-full">
-            <div className="google-sign">
-                <a href="https://accounts.google.com/Login"><i class="fa-brands fa-google text-4xl mx-5 text-red-600"></i></a>
+        <div className="different-account-sec w-full">
+            <div className="google-sign my-5 w-full flex justify-center border-2 border-[rgba(0,0,0,.7)] rounded-full py-3 lg:py-1 xl:py-3">
+                <a href="https://accounts.google.com/Login"><i class="fa-brands fa-google mr-4"></i>Continue with Google</a>
             </div>
-            <div className="facebook-sign">
-            <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjczNjgwMjgwLCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D"><i class="fa-brands fa-facebook text-4xl text-blue-600 mx-5"></i></a>
+            <div className="facebook-sign my-5 w-full flex justify-center border-2 border-blue-600 bg-blue-600 rounded-full py-3 lg:py-1 xl:py-3 text-white">
+                <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjczNjgwMjgwLCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D"><i class="fa-brands fa-facebook mr-4"></i> Continue with Facebook</a>
             </div>
-        </div>
-        <h1 className='text-center w-full my-5'>Or</h1>
+        </div>        
+        <h1 className='text-center w-full mb-5'>Or</h1>
         <div className="about">
             <h1 className='font-semibold font-roboto text-lg'>Sign up with email</h1>
             <h1 className='font-roboto '>Already have an account? <a href="" className='text-blue-600'>Sign in</a></h1>
-
         </div>
         <div className='input-sec my-5 w-full lg:my-2 xl:my-5'>
             <label className='block text-xs my-2 ' htmlFor="">Username</label>
