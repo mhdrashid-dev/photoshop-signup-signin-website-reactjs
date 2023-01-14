@@ -3,7 +3,6 @@ import BlackLogo from '../../Assets/adobe_logo_black.svg';
 
 function Signup() {
   return (
-
     <div className="content h-full flex flex-col justify-start items-start w-full lg:w-1/2 2xl:w-1/3 md:bg-white md:p-12 md:rounded-lg lg:py-5 xl:py-12">
         <div className="logo h-[40px] block lg:hidden">
             <img src={BlackLogo} alt="" />
@@ -27,7 +26,7 @@ function Signup() {
                 <a href="https://accounts.google.com/Login"><i class="fa-brands fa-google mr-4"></i>Continue with Google</a>
             </div>
             <div className="facebook-sign my-5 xl:my-8 w-full flex justify-center border-2 border-blue-600 bg-blue-600 rounded-full py-3 text-white">
-                <a href=""><i class="fa-brands fa-facebook mr-4"></i> Continue with Facebook</a>
+                <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjczNjgwMjgwLCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D"><i class="fa-brands fa-facebook mr-4"></i> Continue with Facebook</a>
             </div>
         </div>
   </div>
