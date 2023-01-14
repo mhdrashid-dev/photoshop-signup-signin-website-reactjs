@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 
 function Login() {
   return (
-      <div className="content h-full flex flex-col justify-start items-start w-full lg:w-1/2 2xl:w-1/3 md:bg-white md:p-12 md:rounded-lg lg:py-5 xl:py-12">
+      <div data-aos="flip-left" data-aos-duration="1500" className="content h-full flex flex-col justify-start items-start w-full lg:w-1/2 2xl:w-1/3 md:bg-white md:p-12 md:rounded-lg lg:py-5 xl:py-12">
         <div className="logo h-[40px] block lg:hidden">
             <img src={BlackLogo} alt="" />
         </div>
