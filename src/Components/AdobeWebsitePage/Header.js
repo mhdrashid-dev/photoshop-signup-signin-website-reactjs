@@ -16,11 +16,11 @@ function Header() {
                 </div>
                 <div className="account-sec flex justify-center items-center">
                     <button className='hidden lg:block text-black mr-5'><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <button className='text-xs font-medium lg:font-normal font-roboto md:text-sm'>Sign In</button>
+                    <button className='text-xs font-medium lg:font-semibold font-roboto md:text-sm hover:text-blue-600 '>Sign In</button>
                 </div>
             </div>            
         </div>        
-        <div className='pc-search w-full h-[10vh] lg:h-[5vh] xl:h-[8vh] fixed top-16 left-auto px-10 hidden lg:hidden justify-center items-center'>
+        <div className='pc-search w-full h-[10vh] lg:h-[5vh] xl:h-[8vh] fixed top-16 left-auto px-10 hidden lg:hidden justify-center items-center bg-white'>
             <div className="input-sec w-full lg:w-2/3 lg:mx-auto p-1 md:p-2 lg:p-1 xl:p-2  rounded-md border border-[rgba(0,0,0,.3)] flex justify-between">
                 <input type="text" className='w-full bg-transparent focus:outline-none' placeholder='Search' />
                 <button><i class="fa-solid fa-magnifying-glass text-[rgba(0,0,0,.7)]"></i></button>
