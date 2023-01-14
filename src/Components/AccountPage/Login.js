@@ -1,9 +1,21 @@
-import React from 'react';
+import React,{useState} from 'react';
 import BlackLogo from '../../Assets/adobe_logo_black.svg';
 import {Link} from 'react-router-dom'
 
 
 function Login() {
+
+  let [email,setEmail]=useState('');
+  let [password,setPassword]=useState('');
+  let [isFill,setIsFill]=useState(false)
+
+  let UserLogin=()=>{
+    if(email.length<2 || password.length<2){
+      setIsFill(true)
+    }
+  }
+
+
   return (
       <div data-aos="flip-left" data-aos-duration="1500" className="content h-full flex flex-col justify-start items-start w-full lg:w-1/2 2xl:w-1/3 md:bg-white md:p-12 md:rounded-lg lg:py-5 xl:py-12">
         <div className="logo h-[40px] block lg:hidden">
@@ -15,12 +27,12 @@ function Login() {
         </div>
         <div className='input-sec my-5 w-full lg:my-2 xl:my-5'>
             <label className='block text-xs my-2 ' htmlFor="">Email</label>
-            <input className='block w-full mb-5 bg-transparent border-b-2 border-blue-600 focus:outline-none' type="text" />
+            <input className='block w-full mb-5 bg-transparent border-b-2 border-blue-600 focus:outline-none placeholder:text-red-600 placeholder:text-sm' placeholder={`${isFill===true && email.length<2 ? 'Enter a valid email !' : ''}`} type="text" onInput={(e)=>{setEmail(e.target.value)}} />
             <label className='block text-xs my-2' htmlFor="">Password</label>        
-            <input className='block w-full  bg-transparent border-b-2 border-blue-600 focus:outline-none' type="text" />    
+            <input className='block w-full  bg-transparent border-b-2 border-blue-600 focus:outline-none placeholder:text-red-600 placeholder:text-sm' placeholder={`${isFill===true && password.length<2 ? 'Please enter password !' : ''}`} type="text" onInput={(e)=>{setPassword(e.target.value)}}/>    
         </div>
         <div className="submit-button mb-5 text-end w-full">
-            <button className='bg-blue-600 px-4 py-1 rounded-full text-white font-semibold'>Continue</button>
+            <button className='bg-blue-600 px-4 py-1 rounded-full text-white font-semibold' onClick={UserLogin}>Continue</button>
         </div>
         <h1 className='text-center w-full my-5'>Or</h1>
         <div className="different-account-sec my-2 w-full">
