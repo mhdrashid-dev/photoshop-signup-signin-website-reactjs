@@ -1,6 +1,7 @@
 import React from 'react'
 
 import WhiteLogo from '../Assets/adobe_logo_white.svg';
+import Login from '../Components/AccountPage/Login';
 import Signup from '../Components/AccountPage/Signup';
 
 
@@ -14,7 +15,8 @@ function AccountPage() {
               <h1 className='my-5 text-white font-semibold text-xl'>Sign in or Create an account</h1>
           </div>
         </div>
-        <Signup></Signup>        
+        {/* <Login></Login> */}
+        <Signup></Signup>               
       </div>
     </div>
   )
