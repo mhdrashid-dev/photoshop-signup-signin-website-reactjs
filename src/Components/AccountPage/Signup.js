@@ -1,5 +1,7 @@
 import React from 'react';
 import BlackLogo from '../../Assets/adobe_logo_black.svg';
+import { Link } from 'react-router-dom';
+
 
 function Signup() {
   return (
@@ -21,7 +23,7 @@ function Signup() {
         <h1 className='text-center w-full mb-5'>Or</h1>
         <div className="about">
             <h1 className='font-semibold font-roboto text-lg'>Sign up with email</h1>
-            <h1 className='font-roboto '>Already have an account? <a href="" className='text-blue-600'>Sign in</a></h1>
+            <h1 className='font-roboto '>Already have an account? <Link to="/" className='text-blue-600'>Sign in</Link></h1>
         </div>
         <div className='input-sec my-5 w-full lg:my-2 xl:my-5'>
             <label className='block text-xs my-2 ' htmlFor="">Username</label>

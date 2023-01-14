@@ -1,8 +1,8 @@
 import React from 'react'
-
 import WhiteLogo from '../Assets/adobe_logo_white.svg';
 import Login from '../Components/AccountPage/Login';
 import Signup from '../Components/AccountPage/Signup';
+import { Route,Routes } from 'react-router-dom';
 
 
 function AccountPage() {
@@ -15,8 +15,10 @@ function AccountPage() {
               <h1 className='my-5 text-white font-semibold text-xl'>Sign in or Create an account</h1>
           </div>
         </div>
-        {/* <Login></Login> */}
-        <Signup></Signup>               
+        <Routes>
+          <Route path='/' element={<Login></Login>}></Route>             
+          <Route path='/signup' element={<Signup></Signup>}></Route>
+        </Routes>          
       </div>
     </div>
   )
