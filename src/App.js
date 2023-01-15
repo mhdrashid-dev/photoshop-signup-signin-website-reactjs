@@ -6,10 +6,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'
 
 
-function App() {
+function App() {  
 
   useEffect(()=>{
-    AOS.init();
+    AOS.init();    
   },[])
 
   return (

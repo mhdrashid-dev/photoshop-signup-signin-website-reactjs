@@ -1,11 +1,30 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import WhiteLogo from '../Assets/adobe_logo_white.svg';
 import Login from '../Components/AccountPage/Login';
 import Signup from '../Components/AccountPage/Signup';
-import { Route,Routes } from 'react-router-dom';
-
+import { Route,Routes ,useNavigate} from 'react-router-dom';
+import { auth } from '../Firebase/Config';
+import {onAuthStateChanged} from 'firebase/auth'
 
 function AccountPage() {
+
+
+  let navigate=useNavigate();
+
+  let CheckUserSign=()=>{
+    onAuthStateChanged(auth, (user) => {
+      if (user) {        
+        const uid = user.uid;
+        navigate('home');        
+      } else {       
+      }
+    });
+  }
+
+  useEffect(()=>{
+      CheckUserSign();
+  },[])
+
   return (
     <div className='w-full h-screen bg-white md:bg-hero bg-center bg-cover flex justify-center items-center 2xl:justify-end'>
       <div className="contianer mx-auto p-5 w-full h-full md:py-40 md:px-32 lg:py-5 lg:px-5 2xl:p-32 flex justify-center items-center 2xl:justify-between">
