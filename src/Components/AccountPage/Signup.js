@@ -1,6 +1,6 @@
 import React,{useState,useRef} from 'react';
 import BlackLogo from '../../Assets/adobe_logo_black.svg';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import {createUserWithEmailAndPassword} from 'firebase/auth'
 import { auth } from '../../Firebase/Config';
 
@@ -14,8 +14,8 @@ function Signup() {
     let [errorEmail,setErrorEmail]=useState('');
     let [isFill,setIsFill]=useState(false);
     let passwordRef=useRef();
-    let emailRef=useRef();
-    
+    let emailRef=useRef();    
+    let navigate=useNavigate()
 
     let CreateAccount=()=>{
         if(username.length<2 || email.length<2 || password.length<2){
@@ -24,12 +24,16 @@ function Signup() {
             createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
-                const user = userCredential.user;
-                console.log("Signup completed");
+                const user = userCredential.user;       
+                navigate('/')        
                 // ...
             })
             .catch((error) => {
-                const errorCode = error.code;                  
+                const errorCode = error.code; 
+                console.log(errorCode);            
+                if(errorCode.length>2){
+                    setIsFill(true);
+                }     
                 if(errorCode==='auth/invalid-email'){
                     setErrorEmail(errorCode)
                     setEmail('');
