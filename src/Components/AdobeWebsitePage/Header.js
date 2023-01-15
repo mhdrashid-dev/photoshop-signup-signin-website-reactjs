@@ -1,11 +1,24 @@
 import React,{useState} from 'react'
 import Logo from '../../Assets/Adobelogo.svg'
+import { useNavigate } from 'react-router-dom';
+import { auth } from '../../Firebase/Config';
+import {signOut} from 'firebase/auth'
 
 function Header() {    
 
     let [mediumActive,setMediumActive]=useState(false);
     let [smallActive,setSmallActive]=useState(false);
     let [logOut,setLogOut]=useState(false);
+    let navigate=useNavigate();
+
+
+    let UserSignOut=()=>{        
+        signOut(auth).then(() => {        
+            navigate('/');
+        }).catch((error) => {
+        
+        });
+    }
 
   return (
     <>
@@ -30,7 +43,7 @@ function Header() {
                 </div>
             </div>          
             <div className={`pc-search w-[100%] md:w-[17%] md:h-[6vh] h-[6vh] lg:w-[12%] xl:w-[10%] lg:h-[8vh] xl:h-[6vh] 2xl:h-[8vh] absolute top-16 lg:top-10 xl:top-16  right-0 2xl:right-[10rem] px-10  justify-center items-center bg-white rounded-b-lg z-20 ${logOut ? 'flex' : 'hidden'}`}>
-                <button className='font-roboto text-xs font-semibold hover:text-blue-600 md:text-sm lg:text-xs xl:text-sm 2xl:text-base'>Log out<i class="fa-solid fa-right-from-bracket ml-3 hidden xl:block"></i></button>
+                <button className='font-roboto text-xs font-semibold hover:text-blue-600 md:text-sm lg:text-xs xl:text-sm 2xl:text-base' onClick={UserSignOut}>Log out<i class="fa-solid fa-right-from-bracket ml-3 hidden xl:block"></i></button>
             </div>
         </div>        
        
