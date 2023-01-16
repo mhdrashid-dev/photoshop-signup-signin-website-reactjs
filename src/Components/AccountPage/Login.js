@@ -21,6 +21,7 @@ function Login() {
     if(email.length<2 || password.length<2){
       setIsFill(true)
     }else{
+      setIsFill(true);
       signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 

@@ -20,7 +20,8 @@ function Signup() {
     let CreateAccount=()=>{
         if(username.length<2 || email.length<2 || password.length<2){
             setIsFill(true);
-        }else{            
+        }else{    
+            setIsFill(true);        
             createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {                               
                 navigate('home')        
