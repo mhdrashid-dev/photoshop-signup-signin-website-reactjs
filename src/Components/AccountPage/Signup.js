@@ -22,10 +22,8 @@ function Signup() {
             setIsFill(true);
         }else{            
             createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;       
-                navigate('/')        
+            .then((userCredential) => {                               
+                navigate('home')        
                 // ...
             })
             .catch((error) => {

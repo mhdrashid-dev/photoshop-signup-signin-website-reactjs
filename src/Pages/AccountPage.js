@@ -13,8 +13,8 @@ function AccountPage() {
 
   let CheckUserSign=()=>{
     onAuthStateChanged(auth, (user) => {
-      if (user) {        
-        const uid = user.uid;
+      if (user) {       
+        
         navigate('home');        
       } else {       
       }
