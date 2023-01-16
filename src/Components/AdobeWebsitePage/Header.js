@@ -7,8 +7,7 @@ import {signOut} from 'firebase/auth'
 function Header() {    
 
     let [mediumActive,setMediumActive]=useState(false);
-    let [smallActive,setSmallActive]=useState(false);
-    let [logOut,setLogOut]=useState(false);
+    let [smallActive,setSmallActive]=useState(false);    
     let navigate=useNavigate();
 
 
